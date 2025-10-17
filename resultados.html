@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predicción | IoT Salud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar slideInLeft">
+      <h2>IoT Salud</h2>
+      <ul>
+        <li onclick="window.location='dashboard.html'">🏠 Inicio</li>
+        <li onclick="window.location='registro.html'">📋 Registrar Datos</li>
+        <li onclick="window.location='resultados.html'">📈 Predicciones</li>
+        <li onclick="logout()">🚪 Salir</li>
+      </ul>
+    </aside>
+
+    <main class="main fadeIn" id="resultados">
+      <h2>Procesando predicción...</h2>
+    </main>
+  </div>
+  <script src="script.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", mostrarResultados);</script>
+</body>
+</html>

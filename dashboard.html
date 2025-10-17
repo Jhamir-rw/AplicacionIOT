@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel | IoT Salud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard fadeIn">
+    <!-- SIDEBAR -->
+    <aside class="sidebar glass slideInLeft">
+      <h2>IoT Salud</h2>
+      <ul>
+        <li onclick="window.location='dashboard.html'">🏠 Inicio</li>
+        <li onclick="window.location='registro.html'">📋 Registrar Datos</li>
+        <li onclick="window.location='resultados.html'">📈 Predicciones</li>
+        <li onclick="logout()">🚪 Cerrar Sesión</li>
+      </ul>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-dashboard">
+      <section class="welcome glass">
+        <h1>Panel de Monitoreo Ambiental</h1>
+        <p>Bienvenido, <strong>Sami</strong>. Desde este panel puede registrar y visualizar condiciones ambientales de hogares monitoreados por sensores IoT.</p>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>🌡 Calidad del Aire</h3>
+          <p>Mediciones de PM2.5 y CO captadas por sensores IoT en interiores.</p>
+        </div>
+
+        <div class="card">
+          <h3>🏠 Condiciones del Hogar</h3>
+          <p>Ventilación, tipo de combustible y tiempo de exposición registrados automáticamente.</p>
+        </div>
+
+        <div class="card">
+          <h3>🚬 Exposición al Humo</h3>
+          <p>Tabaquismo pasivo y contaminación intradomiciliaria evaluadas en tiempo real.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

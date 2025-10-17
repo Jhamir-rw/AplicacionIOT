@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario | Sistema IoT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="center-box">
+    <div class="card">
+      <h2>Crear nueva cuenta</h2>
+      <input type="text" id="newUser" placeholder="Nombre de usuario" required>
+      <input type="password" id="newPass" placeholder="Contraseña" required>
+      <select id="role">
+        <option value="usuario">Usuario</option>
+        <option value="admin">Administrador</option>
+      </select>
+      <button onclick="crearCuenta()">Registrar</button>
+      <p style="text-align:center;margin-top:15px;"><a href="index.html">Volver al inicio</a></p>
+      <p id="msg" class="error"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Variables | IoT Salud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard fadeIn">
+    <!-- SIDEBAR -->
+    <aside class="sidebar glass slideInLeft">
+      <h2>IoT Salud</h2>
+      <ul>
+        <li onclick="window.location='dashboard.html'">🏠 Inicio</li>
+        <li onclick="window.location='registro.html'">📋 Registrar Datos</li>
+        <li onclick="window.location='resultados.html'">📈 Predicciones</li>
+        <li onclick="logout()">🚪 Cerrar Sesión</li>
+      </ul>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-dashboard fadeIn">
+      <h2>Registro de Variables Ambientales</h2>
+
+      <form onsubmit="event.preventDefault(); guardarRegistro();" class="form-glass">
+
+        <!-- CALIDAD DEL AIRE -->
+        <fieldset>
+          <legend>Calidad del Aire</legend>
+          <div class="form-row">
+            <input type="number" id="pm25" placeholder="PM2.5 (µg/m³)" min="0" required>
+            <input type="number" id="co" placeholder="CO (ppm)" min="0" required>
+          </div>
+        </fieldset>
+
+        <!-- CONDICIONES DEL HOGAR -->
+        <fieldset>
+          <legend>Condiciones del Hogar</legend>
+          <div class="form-row">
+            <select id="ventilacion">
+              <option value="0">Cerrado</option>
+              <option value="1">Media</option>
+              <option value="2">Flujo cruzado</option>
+            </select>
+            <select id="extractor">
+              <option value="0">Sin extractor</option>
+              <option value="1">Con extractor</option>
+            </select>
+          </div>
+          <input type="number" id="ventanas" placeholder="Minutos de ventanas abiertas/día" min="0">
+        </fieldset>
+
+        <!-- COMBUSTIBLE Y COCINA -->
+        <fieldset>
+          <legend>Combustible y Cocina</legend>
+          <div class="form-row">
+            <select id="combustible">
+              <option value="0">Gas / Limpio</option>
+              <option value="1">Biomasa (leña / carbón)</option>
+            </select>
+            <input type="number" id="horasCocina" placeholder="Horas de uso de cocina/día" min="0">
+          </div>
+        </fieldset>
+
+        <!-- TABAQUISMO -->
+        <fieldset>
+          <legend>Tabaquismo Ambiental</legend>
+          <div class="form-row">
+            <select id="tabaquismo">
+              <option value="0">No</option>
+              <option value="1">Sí</option>
+            </select>
+            <input type="number" id="horasHumo" placeholder="Horas/semana con humo" min="0">
+            <input type="number" id="fumadores" placeholder="Nº de fumadores en el hogar" min="0">
+          </div>
+        </fieldset>
+
+        <!-- BOTÓN DE GUARDADO -->
+        <div class="btn-container">
+          <button type="submit" class="btn-save">
+            💾 Guardar Registro
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

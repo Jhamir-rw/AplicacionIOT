@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingreso | Sistema IoT Salud</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-body">
+  <div class="login-container fadeIn">
+    <div class="login-box glass">
+      <div class="logo-circle">🏥</div>
+      <h1>Sistema IoT Salud</h1>
+      <p class="subtitle">Monitoreo y predicción de riesgos respiratorios</p>
+
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" placeholder="Ingrese su usuario" />
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Ingrese su contraseña" />
+      </div>
+
+      <button class="btn-primary" onclick="login()">Ingresar</button>
+      <p id="error" class="error"></p>
+      <footer>© 2025 - Sistema IoT Salud - Posta Médica Central</footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
